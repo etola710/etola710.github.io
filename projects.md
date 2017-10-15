@@ -7,10 +7,10 @@ Here are a few of my projects. I will add more as I find time to organize them a
 
 ## Pick and Place with the Research Robot Baxter
 
-Video: https://goo.gl/NjGVmm
+{% include youtubePlayer.html id="t8z_xwegc10" %}
 
-## Senior Design Project: Underactuaded Robotic Hand
+## Senior Design Project: Underactuated Robotic Hand
 
-Video: https://goo.gl/qXafB7
+{% include youtubePlayer.html id="coN1ULQgXuE" %}
 
 [back](./)
