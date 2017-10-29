@@ -1,92 +1,77 @@
-# The Minimal theme
+# Base
 
-[![Build Status](https://travis-ci.org/pages-themes/minimal.svg?branch=master)](https://travis-ci.org/pages-themes/minimal) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimal.svg)](https://badge.fury.io/rb/jekyll-theme-minimal)
+Knowledge base template for Jekyll. Browse through a [live demo](https://orange-ape.cloudvent.net/).
 
-*Minimal is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/minimal), or even [use it today](#usage).*
+![Base template screenshot](images/_screenshot.png)
 
-![Thumbnail of minimal](thumbnail.png)
+Base was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+Find more templates and themes at [Jekyll Tips](https://learn.cloudcannon.com/jekyll-templates/).
 
-## Usage
+Learn Jekyll with step-by-step tutorials and videos at [CloudCannon Academy](https://learn.cloudcannon.com/).
 
-To use the Minimal theme:
+## Features
 
-1. Add the following to your site's `_config.yml`:
+* Tutorials organised by category
+* Two types of tutorials - text and video
+* Ability to have a "tutorial series"
+* FAQ section
+* Disqus comments
+* Sticky sidebar for main headings in tutorials
+* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
+* RSS/Atom feed
+* SEO tags
+* Google Analytics
 
-    ```yml
-    theme: jekyll-theme-minimal
-    ```
+## Setup
 
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
+1. Add your site and author details in `_config.yml`.
+2. Add your Google Analytics, Disqus and MailChimp keys to `_config.yml`.
+3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
 
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
+## Develop
 
+Base was built with [Jekyll](http://jekyllrb.com/) version 3.4.3, but should support newer versions as well.
 
+Install the dependencies with [Bundler](http://bundler.io/):
 
-## Customizing
+~~~bash
+$ bundle install
+~~~
 
-### Configuration variables
+Run `jekyll` commands through Bundler to ensure you're using the right versions:
 
-Minimal will respect the following variables, if set in your site's `_config.yml`:
+~~~bash
+$ bundle exec jekyll serve
+~~~
 
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
-```
+## Editing
 
-Additionally, you may choose to set the following optional variables:
+Base is already optimised for adding, updating and removing tutorials, navigation, footer and FAQ information in CloudCannon.
 
-```yml
-show_downloads: ["true" or "false" to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
-```
+The sticky sidebar in tutorials in populated by pulling out `<h2>` elements from the content.
 
-### Stylesheet
+### Posts
 
-If you'd like to add your own custom styles:
+* Add, update or remove a post in the *Posts* collection.
+* The tutorials page is organised by categories.
+* Change the defaults when new posts are created in `_posts/_defaults.md`.
 
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
+### Post Series
+To create a new series:
 
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+* Add a new document to the `sets` collection.
+* Set the `title` and `description`.
 
-### Layouts
+To add a tutorial/post to a series:
+* Add a `set` field to the tutorial front matter which points to the file name of the desired set without the `.md` extention. e.g. If I have a set at `_sets/getting-started.md` I would use this in my tutorial front matter: `set: getting-started`.
+* Add a `set_order` field to the tutorial front matter and specify a number. This is the tutorials order in the set.
 
-If you'd like to change the theme's HTML layout:
+### Navigation
 
-1. [Copy the original template](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-2. Create a file called `/_layouts/default.html` in your site
-3. Paste the default layout content copied in the first step
-4. Customize the layout as you'd like
+* Exposed as a data file to give clients better access.
+* Set in the *Data* / *Navigation* section.
 
-## Roadmap
+### Footer
 
-See the [open issues](https://github.com/pages-themes/minimal/issues) for a list of proposed features (and known issues).
-
-## Project philosophy
-
-The Minimal theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
-
-## Contributing
-
-Interested in contributing to Minimal? We'd love your help. Minimal is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](CONTRIBUTING.md) for instructions on how to contribute.
-
-### Previewing the theme locally
-
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
-
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/minimal`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
-
-### Running tests
-
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` one before the test script will work.
+* Exposed as a data file to give clients better access.
+* Set in the *Data* / *Footer* section.

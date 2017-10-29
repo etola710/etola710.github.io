@@ -1,0 +1,22 @@
+---
+faq:
+  - question: About
+    answer: Hello and welcome to my site. My name is Eric Tola and I am currently a Mechanical Engineering graduate student at Stony Brook University. I decided to develop a website to show some of the projects I have worked on throughtout my career as well as some of the personal projects I want to share with potential employeers. My interests include, robotics, dynamics and controls, applied mathematics, deep learning, artificial intelligence and mechanical design. I am looking for a careers doing robotics in the medical, manfucaturing, areospace and autonomous vehicles. Thank you for taking the time to visit this site. If you have any questions feel free to contact me.
+  - question: Contact Information
+    answer: Feel free to email me at - eric.j.tola@gmail.com
+---
+
+<h1>Eric Tola</h1>
+
+<section class="faq">
+	<ul>
+		{% for item in page.faq %}
+			<li><a href="#{{ item.question | slugify }}">{{ item.question }}</a></li>
+		{% endfor %}
+	</ul>
+
+	{% for item in page.faq %}
+		<h2 id="{{ item.question | slugify}}">{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+		{{ item.answer | markdownify }}
+	{% endfor %}
+</section>
