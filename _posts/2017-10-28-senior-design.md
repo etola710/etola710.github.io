@@ -1,18 +1,18 @@
 ---
 date: 2017-10-28
-title: Senior Design Project - Underactuated Robotic Hand
+title: Underactuated Robotic Hand
 video_id: coN1ULQgXuE
 description: Senior Design Project
 categories:
-  - deployment
+  - Robot Manipulation
 resources:
   - name: "Final Report"
-    link: https://jekyllrb.com/docs/frontmatter/
+    link: https://drive.google.com/file/d/0B0ywkAMkST4fLXFYVjh2OUt1ZFk/view
   - name: "Robot Hand Model"
     link: https://github.com/etola710/hand_model
 type: Video
-set: getting-started
-set_order: 1
+set: robotics
+set_order: 2
 ---
 
 This is my Senior Design project at Stony Brook University.
@@ -40,5 +40,3 @@ The goal of this project was the development of an [underactuated](https://en.wi
 ## References
 
 [Yale Open Hand](https://www.eng.yale.edu/grablab/openhand/)
-
-[Right Hand Robotics](https://www.righthandrobotics.com/)

@@ -4,12 +4,12 @@ title: Baxter Pick and Place
 video_id: t8z_xwegc10
 description: ITTP Project
 categories:
-  - deployment
+  - Robot Manipulation
 resources:
   - name: "Source Code"
     link: https://github.com/BetaS/baxter_grip_object
 type: Video
-set: getting-started
+set: robotics
 set_order: 1
 ---
 
