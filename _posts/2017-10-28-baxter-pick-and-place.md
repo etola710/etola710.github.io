@@ -2,9 +2,10 @@
 date: 2017-10-28
 title: Baxter Pick and Place
 video_id: t8z_xwegc10
-description: ITTP Project
+description: ITTP Student Project
 categories:
   - Robot Manipulation
+  - Computer Vision
 resources:
   - name: "Source Code"
     link: https://github.com/BetaS/baxter_grip_object

@@ -5,6 +5,8 @@ video_id: coN1ULQgXuE
 description: Senior Design Project
 categories:
   - Robot Manipulation
+  - Mechanical Design
+  - Robot Hands
 resources:
   - name: "Final Report"
     link: https://drive.google.com/file/d/0B0ywkAMkST4fLXFYVjh2OUt1ZFk/view
