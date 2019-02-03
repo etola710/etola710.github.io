@@ -3,6 +3,6 @@
 - name: Projects
   link: /projects/
 - name: Resume
-  link: /_includes/resume.pdf
+  link: /resume/
 - name: About
   link: /about/
